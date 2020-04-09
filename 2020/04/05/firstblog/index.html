@@ -1,32 +1,77 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>firstblog - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
 
-block content
-  include includes/aside.pug
-  article
-    h1= page.title
-    if page.date
-      div.article-meta
-        i(class='fa fa-pencil')
-          | 
-          if page.author
-            a= page.author
-          else
-            a= config.author
-        time(datetime=page.date.toJSON())
-          i(class='fa fa-clock-o')  #{date(page.date, date_format)}
-        if page.tags.length
-          span.article-tags
-            i(class='fa fa-tag')
-              each tag in page.tags.data
-                | 
-                a(href=url_for('/tags/' + tag.name))= tag.name
-    != page.content
+  
+<link rel="stylesheet" href="/css/style.css">
 
-  nav.article-pagination
-    if page.prev
-      a.article-prev(href=url_for(page.prev.path)) 前一篇: #{page.prev.title}
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">firstblog</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-04-05</span>
+  </div>
+  <div class="post-content">
+    <p>##第一章</p>
+<p>内容：有了我的博客，好开心。</p>
+<hr>
+
+  </div>
+  <div class="post-footer">
     
-    if page.next
-      a.article-next(href=url_for(page.next.path)) 后一篇: #{page.next.title}
 
-  div!= paginator()
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
